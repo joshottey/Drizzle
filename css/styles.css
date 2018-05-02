@@ -10,6 +10,7 @@ body {
 .top-bar {
   padding: 1em;
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -51,13 +52,18 @@ body {
   font-size: 105%;
 }
 
-.main {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+@media screen and (max-width: 600px) {
+  #locationInput {
+    flex-basis: 80%;
+  }
+  #searchLoc {
+    margin-top: 0.5em;
+    flex-basis: 50%;
+  }
 }
 
+.main {}
+
 .main p {
-  flex-basis: 45%;
-  padding: 0.5em;
+  padding: 1em;
 }
